@@ -18,7 +18,6 @@ for d in range(n_days):
 # find average probability per day = normalise per hour of the day
 sum_hour_prob = np.zeros(24).reshape(24,1)
 for d in range(n_days):
-	hour_prob = []
 	for h in range(n_hours):
 		sum_hour_prob[h] = sum(sum_hour_prob[h], day_prob[d][h])
 average_prob_per_hour = sum_hour_prob / sum(sum_hour_prob)
