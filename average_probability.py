@@ -15,7 +15,7 @@ for d in range(n_days):
 		hour_prob.append(random_month[d][h] / float(sum(random_month[d])))
 	day_prob.append(hour_prob)
 
-# find average probability per day = normalise per hour of the day
+# find average probability per day, and then normalise per hour of the day
 sum_hour_prob = np.zeros(24).reshape(24,1)
 for d in range(n_days):
 	for h in range(n_hours):
